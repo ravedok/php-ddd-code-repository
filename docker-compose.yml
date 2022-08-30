@@ -1,20 +1,20 @@
 version: '3.5'
 
 services:
-  # repository-code-nginx:
-  #   container_name: repository-code-nginx
-  #   build:
-  #     context: ./docker/nginx
-  #     args:
-  #       UID: $U_ID
-  #   ports:
-  #     - '1000:80'
-  #   volumes:
-  #     - ./public:/appdata/www/public
-  #   depends_on:
-  #     - repository-code-php
-  #   networks:
-  #     - repository-code-network
+  repository-code-nginx:
+    container_name: repository-code-nginx
+    build:
+      context: ./docker/nginx
+      args:
+        UID: $U_ID
+    ports:
+      - '1000:80'
+    volumes:
+      - ./public:/appdata/www/apps/catalog/public
+    depends_on:
+      - repository-code-php
+    networks:
+      - repository-code-network
 
   repository-code-php:
     container_name: repository-code-php
