@@ -8,7 +8,7 @@ use InvalidArgumentException;
 use Ramsey\Uuid\Uuid as RamseyUuid;
 use Stringable;
 
-abstract class Uuid implements Stringable
+class Uuid implements Stringable
 {
     public function __construct(protected string $value)
     {

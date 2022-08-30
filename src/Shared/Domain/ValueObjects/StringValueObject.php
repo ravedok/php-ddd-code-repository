@@ -10,8 +10,7 @@ abstract class StringValueObject implements Stringable
 {
     public function __construct(protected string $value)
     {
-        
-        
+        $this->ensureIsValidValue($value);
     }
 
     public function equals(StringValueObject $other): bool
