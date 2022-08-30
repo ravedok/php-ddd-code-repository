@@ -1,0 +1,58 @@
+version: '3.5'
+
+services:
+  # repository-code-nginx:
+  #   container_name: repository-code-nginx
+  #   build:
+  #     context: ./docker/nginx
+  #     args:
+  #       UID: $U_ID
+  #   ports:
+  #     - '1000:80'
+  #   volumes:
+  #     - ./public:/appdata/www/public
+  #   depends_on:
+  #     - repository-code-php
+  #   networks:
+  #     - repository-code-network
+
+  repository-code-php:
+    container_name: repository-code-php
+    build:
+      context: ./docker/php
+      args:
+        UID: $U_ID
+    volumes:
+      - ./:/appdata/www
+    ###> XDEBUG 3 ###
+    # Use your client IP here
+    # Linux: run "ip a | grep docker0"
+    # Windows (with WSL2) and Mac: host.docker.internal
+    environment:
+      XDEBUG_CLIENT_HOST: 127.0.01
+      XDEBUG_CLIENT_PORT: 9003
+      PHP_IDE_CONFIG: serverName=repository-code-server
+    networks:
+      - repository-code-network
+    depends_on:
+      - repository-code-mysql
+
+  repository-code-mysql:
+    container_name: repository-code-mysql
+    image: mysql:8.0.26
+    ports:
+      - '3336:3306'
+    environment:
+      MYSQL_DATABASE: database
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - repository-code-mysql-data:/var/lib/mysql
+    networks:
+      - repository-code-network
+    command: [ 'mysqld', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci' ]
+
+networks:
+  repository-code-network:
+
+volumes:
+  repository-code-mysql-data:
