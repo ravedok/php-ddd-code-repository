@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Ravedok\Tests\Catalog\Product\Domain;
 
-use Ravedok\Catalog\Product\Domain\ProductId;
+use Ravedok\Catalog\Products\Domain\ProductId;
 
 final class ProductIdMother
 {

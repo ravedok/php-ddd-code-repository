@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Ravedok\Catalog\Product\Application\Create;
+namespace Ravedok\Catalog\Products\Application\Create;
 
-use Ravedok\Catalog\Product\Domain\Product;
-use Ravedok\Catalog\Product\Domain\ProductId;
+use Ravedok\Catalog\Products\Domain\Product;
+use Ravedok\Catalog\Products\Domain\ProductId;
 use Ravedok\Shared\Domain\Bus\Event\EventBus;
-use Ravedok\Catalog\Product\Domain\ProductName;
-use Ravedok\Catalog\Product\Domain\ProductRepository;
+use Ravedok\Catalog\Products\Domain\ProductName;
+use Ravedok\Catalog\Products\Domain\ProductRepository;
 
 final class ProductCreator
 {

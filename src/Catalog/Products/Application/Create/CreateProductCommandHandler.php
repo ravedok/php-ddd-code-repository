@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Ravedok\Catalog\Product\Application\Create;
+namespace Ravedok\Catalog\Products\Application\Create;
 
-use Ravedok\Catalog\Product\Domain\ProductId;
-use Ravedok\Catalog\Product\Domain\ProductName;
+use Ravedok\Catalog\Products\Domain\ProductId;
+use Ravedok\Catalog\Products\Domain\ProductName;
 
 final class CreateProductCommandHandler
 {

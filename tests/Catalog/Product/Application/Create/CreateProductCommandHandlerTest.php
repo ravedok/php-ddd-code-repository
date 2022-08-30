@@ -7,9 +7,9 @@ namespace Ravedok\Tests\Catalog\Product\Application\Create;
 use PHPUnit\Framework\MockObject\MockClass;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use Ravedok\Catalog\Product\Application\Create\CreateProductCommandHandler;
-use Ravedok\Catalog\Product\Application\Create\ProductCreator;
-use Ravedok\Catalog\Product\Domain\ProductRepository;
+use Ravedok\Catalog\Products\Application\Create\CreateProductCommandHandler;
+use Ravedok\Catalog\Products\Application\Create\ProductCreator;
+use Ravedok\Catalog\Products\Domain\ProductRepository;
 use Ravedok\Shared\Domain\Bus\Event\EventBus;
 
 class CreateProductCommandHandlerTest extends TestCase

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ravedok\Catalog\Product\Application\Create;
+namespace Ravedok\Catalog\Products\Application\Create;
 
 final class CreateProductCommand
 {

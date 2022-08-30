@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Ravedok\Tests\Catalog\Product\Domain;
 
 use Faker\Factory;
-use Ravedok\Catalog\Product\Domain\ProductName;
+use Ravedok\Catalog\Products\Domain\ProductName;
 
 final class ProductNameMother
 {

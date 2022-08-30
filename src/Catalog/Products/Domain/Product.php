@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Ravedok\Catalog\Product\Domain;
+namespace Ravedok\Catalog\Products\Domain;
 
-use Ravedok\Catalog\Product\Domain\ProductId;
+use Ravedok\Catalog\Products\Domain\ProductId;
 use Ravedok\Shared\Domain\AggregateRoot;
 
 final class Product extends AggregateRoot
