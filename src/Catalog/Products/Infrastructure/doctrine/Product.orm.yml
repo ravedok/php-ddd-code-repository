@@ -1,0 +1,13 @@
+Ravedok\Catalog\Products\Domain\Product:
+    type: entity
+    table: products    
+    # repositoryClass: Atlas\Redeemables\Repository\ProductRepository
+    id:
+        id:
+            type: uuid
+            unique: true
+            id: true
+    fields:      
+        name:
+            type: string
+            length: 30

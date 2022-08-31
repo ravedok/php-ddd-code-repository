@@ -2,6 +2,10 @@ framework:
     messenger:
       default_bus: messenger.bus.commands
       buses:
-        messenger.bus.commands: ~
+        messenger.bus.commands: 
+          middleware:
+            - doctrine_ping_connection
+            - doctrine_close_connection
+            - doctrine_transaction
         messenger.bus.events: 
           default_middleware: allow_no_handlers
