@@ -15,7 +15,7 @@ class Uuid implements Stringable
         $this->ensureIsValidValue($value);
     }
 
-    private function ensureIsValidValue(string $value): void 
+    private function ensureIsValidValue(string $value): void
     {
         if (!RamseyUuid::isValid($value)) {
             throw new InvalidArgumentException(sprintf('<%s> does not allow the value <%s>.', static::class, $value));
@@ -27,7 +27,7 @@ class Uuid implements Stringable
         return new static(RamseyUuid::uuid4()->toString());
     }
 
-    public function value(): string 
+    public function value(): string
     {
         return $this->value;
     }
@@ -37,7 +37,8 @@ class Uuid implements Stringable
         return $this->value() === $other->value();
     }
 
-    public function __toString(): string { 
+    public function __toString(): string
+    {
         return $this->value;
     }
 }

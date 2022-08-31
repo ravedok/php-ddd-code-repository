@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Ravedok\Catalog\Products\Domain;
 
-use Ravedok\Catalog\Products\Domain\ProductId;
 use Ravedok\Shared\Domain\AggregateRoot;
 
 final class Product extends AggregateRoot
@@ -13,12 +12,12 @@ final class Product extends AggregateRoot
     {
         $this->record(ProductWasCreated::fromProduct($this));
     }
-    
-    public function id(): ProductId 
+
+    public function id(): ProductId
     {
         return $this->id;
     }
-    
+
     public function name(): ProductName
     {
         return $this->name;

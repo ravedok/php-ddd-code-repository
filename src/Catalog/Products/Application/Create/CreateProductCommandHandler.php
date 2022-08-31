@@ -12,14 +12,12 @@ final class CreateProductCommandHandler implements CommandHandler
 {
     public function __construct(private readonly ProductCreator $productCreator)
     {
-        
     }
 
-    public function __invoke(CreateProductCommand $command): void 
+    public function __invoke(CreateProductCommand $command): void
     {
         $id = new ProductId($command->id());
         $name = new ProductName($command->name());
-
 
         ($this->productCreator)($id, $name);
     }

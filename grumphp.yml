@@ -2,3 +2,5 @@ grumphp:
     tasks: 
         phpunit: null 
         phpstan: null
+        phpcsfixer: 
+            config: .php-cs-fixer.dist.php

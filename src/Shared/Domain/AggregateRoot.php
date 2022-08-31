@@ -17,7 +17,7 @@ abstract class AggregateRoot
     }
 
     /** @return DomainEvent[] */
-    final public function pullDomainEvents(): array 
+    final public function pullDomainEvents(): array
     {
         $domainEvents = $this->domainEvents;
 
@@ -25,5 +25,4 @@ abstract class AggregateRoot
 
         return $domainEvents;
     }
-
 }

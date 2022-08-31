@@ -9,11 +9,11 @@ use Symfony\Component\Messenger\MessageBusInterface;
 class SymfonyCommandBus implements CommandBus
 {
     public function __construct(private MessageBusInterface $bus)
-    {       
+    {
     }
 
-    public function dispatch(Command $command): void 
-    {         
+    public function dispatch(Command $command): void
+    {
         $this->bus->dispatch($command);
     }
 }

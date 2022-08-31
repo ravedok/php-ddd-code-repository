@@ -18,7 +18,7 @@ abstract class StringValueObject implements Stringable
         return $this->value() === $other->value();
     }
 
-    public function value(): string 
+    public function value(): string
     {
         return $this->value;
     }
@@ -28,8 +28,7 @@ abstract class StringValueObject implements Stringable
         return $this->value();
     }
 
-    protected function ensureIsValidValue(string $value): void 
+    protected function ensureIsValidValue(string $value): void
     {
-        
     }
 }

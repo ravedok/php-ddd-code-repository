@@ -7,4 +7,3 @@ namespace Ravedok\Shared\Domain\Bus\Event;
 interface EventHandler
 {
 }
-

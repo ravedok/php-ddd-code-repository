@@ -16,22 +16,23 @@ abstract class DomainEvent
     public function __construct(private readonly string $aggregateId, string $eventId = null, string $ocurredOn = null)
     {
         $this->eventId = $eventId ?: Uuid::random()->value();
-        $this->ocurredOn = $ocurredOn ?: (new DateTimeImmutable())->format(DateTimeInterface::ATOM) ;
+        $this->ocurredOn = $ocurredOn ?: (new DateTimeImmutable())->format(DateTimeInterface::ATOM);
     }
 
-    public function aggregateId(): string 
+    public function aggregateId(): string
     {
         return $this->aggregateId;
     }
 
-    public function eventId(): string 
+    public function eventId(): string
     {
         return $this->eventId;
     }
 
-    public function ocurredOn(): string {
+    public function ocurredOn(): string
+    {
         return $this->ocurredOn;
     }
 
-    abstract function eventName(): string;
+    abstract public function eventName(): string;
 }
