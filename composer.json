@@ -12,7 +12,8 @@
             "composer/package-versions-deprecated": true,
             "symfony/flex": true,
             "symfony/runtime": true,
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "phpro/grumphp": true
         },
         "optimize-autoloader": true,
         "preferred-install": {
@@ -46,6 +47,7 @@
     },
     "require-dev": {
         "fakerphp/faker": "^1.20",
+        "phpro/grumphp": "^1.13",
         "phpstan/extension-installer": "^1.1",
         "phpstan/phpstan": "^1.8",
         "phpstan/phpstan-phpunit": "^1.1",
