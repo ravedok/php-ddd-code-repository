@@ -1,0 +1,6 @@
+parameters:
+	level: 9
+	paths:
+		- apps/catalog/src
+		- src
+		- tests	

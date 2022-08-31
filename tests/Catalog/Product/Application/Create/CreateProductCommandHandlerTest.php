@@ -31,6 +31,7 @@ class CreateProductCommandHandlerTest extends TestCase
         ($handler)($command);
     }
 
+    /** @return ProductRepository&MockObject */
     private function productRepository(): ProductRepository | MockObject
     {
         $repository = $this->getMockBuilder(ProductRepository::class)            
@@ -39,6 +40,7 @@ class CreateProductCommandHandlerTest extends TestCase
         return $repository;
     }
 
+    /** @return EventBus&MockObject */
     private function eventBus(): EventBus | MockObject
     {
         $eventBus = $this->getMockBuilder(EventBus::class)

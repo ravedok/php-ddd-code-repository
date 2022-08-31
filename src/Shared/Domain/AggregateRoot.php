@@ -8,6 +8,7 @@ use Ravedok\Shared\Domain\Bus\Event\DomainEvent;
 
 abstract class AggregateRoot
 {
+    /** @var DomainEvent[] */
     private array $domainEvents = [];
 
     final protected function record(DomainEvent $domainEvent): void

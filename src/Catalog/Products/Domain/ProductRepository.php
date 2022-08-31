@@ -6,5 +6,5 @@ namespace Ravedok\Catalog\Products\Domain;
 
 interface ProductRepository
 {
-    public function save(): void;
+    public function save(Product $product): void;
 }

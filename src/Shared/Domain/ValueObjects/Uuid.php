@@ -10,7 +10,7 @@ use Stringable;
 
 class Uuid implements Stringable
 {
-    public function __construct(protected string $value)
+    final public function __construct(protected string $value)
     {
         $this->ensureIsValidValue($value);
     }
@@ -22,7 +22,7 @@ class Uuid implements Stringable
         }
     }
 
-    public static function random(): self
+    public static function random(): static
     {
         return new static(RamseyUuid::uuid4()->toString());
     }
