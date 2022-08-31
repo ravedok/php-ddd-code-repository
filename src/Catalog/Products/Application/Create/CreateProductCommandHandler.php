@@ -6,8 +6,9 @@ namespace Ravedok\Catalog\Products\Application\Create;
 
 use Ravedok\Catalog\Products\Domain\ProductId;
 use Ravedok\Catalog\Products\Domain\ProductName;
+use Ravedok\Shared\Domain\Bus\Command\CommandHandler;
 
-final class CreateProductCommandHandler
+final class CreateProductCommandHandler implements CommandHandler
 {
     public function __construct(private readonly ProductCreator $productCreator)
     {

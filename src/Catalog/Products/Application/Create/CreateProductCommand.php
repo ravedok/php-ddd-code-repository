@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace Ravedok\Catalog\Products\Application\Create;
 
-final class CreateProductCommand
+use Ravedok\Shared\Domain\Bus\Command\Command;
+
+final class CreateProductCommand implements Command
 {
     public function __construct(private readonly string $id,  private readonly string $name)
     {        
