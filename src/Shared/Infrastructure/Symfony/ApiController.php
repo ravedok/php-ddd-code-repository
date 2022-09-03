@@ -36,5 +36,5 @@ abstract class ApiController
     public function setSerializer(SerializerInterface $serializer): void
     {
         $this->serializer = $serializer;
-    }    
+    }
 }

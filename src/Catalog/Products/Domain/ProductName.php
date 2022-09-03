@@ -9,8 +9,8 @@ use Ravedok\Shared\Domain\ValueObjects\StringValueObject;
 
 final class ProductName extends StringValueObject
 {
-    private const MIN_LENGTH = 5;
-    private const MAX_LENGTH = 30;
+    public const MIN_LENGTH = 5;
+    public const MAX_LENGTH = 30;
 
     protected function ensureIsValidValue(string $value): void
     {

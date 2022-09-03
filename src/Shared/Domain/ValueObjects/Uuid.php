@@ -10,9 +10,17 @@ use Stringable;
 
 class Uuid implements Stringable
 {
-    final public function __construct(protected string $value)
+    protected string $value;
+
+    final public function __construct(?string $value)
     {
+        if (null === $value) {
+            $value = $this->random()->value();
+        }
+
         $this->ensureIsValidValue($value);
+
+        $this->value = $value;
     }
 
     private function ensureIsValidValue(string $value): void
